@@ -1,5 +1,32 @@
-```html
-<!DOCTYPE html>
+
+```python
+import streamlit as st
+import streamlit.components.v1 as components
+
+st.set_page_config(
+    page_title="NSE 52-Week AI Screener",
+    page_icon="📈",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
+
+st.markdown(
+    """
+    <style>
+        .block-container {
+            padding-top: 0.5rem;
+            padding-bottom: 0rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            max-width: 100%;
+        }
+        header[data-testid="stHeader"] { display: none; }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+HTML_DASHBOARD = r"""<!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
@@ -880,4 +907,7 @@
   </script>
 </body>
 </html>
+"""
+
+components.html(HTML_DASHBOARD, height=1350, scrolling=True)
 ```
