@@ -1,5 +1,4 @@
-
-```python
+python
 import streamlit as st
 import streamlit.components.v1 as components
 
@@ -910,4 +909,3 @@ HTML_DASHBOARD = r"""<!DOCTYPE html>
 """
 
 components.html(HTML_DASHBOARD, height=1350, scrolling=True)
-```
